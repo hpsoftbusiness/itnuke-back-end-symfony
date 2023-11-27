@@ -19,7 +19,7 @@ class MultipleWords implements Strategy
         $result = [];
 
         foreach ($movies as $movie) {
-            if (str_word_count($movie) > 1) {
+            if (preg_match('/\s/', $movie)) {
                 $result[] = $movie;
             }
         }
