@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Movies\Business;
 
 /**
- *
+ * Movies facade interface
  */
 interface MoviesFacadeInterface
 {
@@ -14,5 +14,5 @@ interface MoviesFacadeInterface
      *
      * @return mixed
      */
-    public function getRecommendation(string $recommendationType);
+    public function getRecommendation(string $recommendationType): mixed;
 }

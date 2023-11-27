@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Movies\Persistence\Reader;
 
 /**
- *
+ * Reading Movies from database
  */
 class Movies
 {

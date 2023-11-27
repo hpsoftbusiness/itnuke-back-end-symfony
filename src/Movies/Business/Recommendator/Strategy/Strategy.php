@@ -4,7 +4,10 @@ declare(strict_types=1);
 
 namespace App\Movies\Business\Recommendator\Strategy;
 
-interface RecommendStrategy
+/**
+ * Recommendation strategy
+ */
+interface Strategy
 {
     /**
      * @param array $movies

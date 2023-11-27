@@ -11,18 +11,19 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- *
+ * Main movies module controller
  */
 class IndexController extends AbstractController
 {
     /**
      * @param MoviesFacadeInterface $moviesFacade
+     * @param Request $request
      *
      * @return JsonResponse
      */
     #[Route('/api/movies/recommendations')]
     public function number(MoviesFacadeInterface $moviesFacade, Request $request): JsonResponse
     {
-        return new JsonResponse($moviesFacade->getRecommendation($request->get('recommendation')));
+        return new JsonResponse($moviesFacade->getRecommendation($request->get('type')));
     }
 }
