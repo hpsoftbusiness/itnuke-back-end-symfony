@@ -16,8 +16,6 @@ class Random implements Strategy
      */
     public function recommend(array $movies): array
     {
-        $randomKeys = array_rand($movies,3);
-
-        return [$movies[$randomKeys[0]], $movies[$randomKeys[1]], $movies[$randomKeys[2]]];
+        return $movies;
     }
 }

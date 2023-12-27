@@ -21,7 +21,7 @@ class IndexController extends AbstractController
      *
      * @return JsonResponse
      */
-    #[Route('/api/movies/recommendations')]
+    #[Route('/api/projects/recommendations')]
     public function number(MoviesFacadeInterface $moviesFacade, Request $request): JsonResponse
     {
         return new JsonResponse($moviesFacade->getRecommendation($request->get('type')));
